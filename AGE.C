@@ -30,25 +30,25 @@ if((d1 > 31 || d1 < 1) || (d2 > 31 || d2 < 1)  || (m1<1 || m1>12) || (m2<1 || m2
 }
 else
 {
-	r3=y2-y1;
+	r3=y2-y1;    //r3 is Result in Year
 
 	if(d2>=d1)
 	{
 		r1=d2-d1;
 	}
 	else{
-		m2=m2-1;
-		d2=d2+31;
-		r1=d2-d1;
+		m2=m2-1;            //1 Month Sub From Current Month
+	      //d2=d2+31;	    //31 Days Add in Current Date
+		r1=(d2+31)-d1;
 	}
 	if(m2>=m1)
 	{
 		r2=m2-m1;
 	}
 	else{
-		r3=r3-1;
-		m2=m2+12;
-		r2=m2-m1;
+		r3=r3-1;           //1 Year Sub From Result Year
+	       //m2=m2+12;         //12 Months Add in Current Month
+		r2=(m2+12)-m1;
 	}
 	printf("Age Calculated is %d Years %d Months %d Days", r3,r2,r1);
 }
