@@ -47,7 +47,7 @@ else
 	}
 	else{
 		r3=r3-1;
-		m2=m2-12;
+		m2=m2+12;
 		r2=m2-m1;
 	}
 	printf("Age Calculated is %d Years %d Months %d Days", r3,r2,r1);
